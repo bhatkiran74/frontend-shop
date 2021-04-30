@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { auth, googleAuthProvider } from '../../firebase'
+import { auth } from '../../firebase'
 
 import { toast } from 'react-toastify';
 
@@ -54,6 +54,7 @@ const RegisterComplete = ({ history }) => {
 
                 console.log("user " + user + " token :" + idTokenResult);
 
+                toast.success(`successfully completed email varification by ${email}`)
                 //home page var push kara
                 history.push('/')
             }

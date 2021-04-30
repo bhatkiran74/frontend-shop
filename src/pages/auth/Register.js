@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { auth, googleAuthProvider } from '../../firebase'
+import { auth } from '../../firebase'
 
 import { toast } from 'react-toastify';
 
@@ -37,7 +37,8 @@ const Register = () => {
     const registerForm = () =>
         <form onSubmit={handleSubmit}>
 
-            <input className="form-control" type="email" value={email} onChange={(e) => setemail(e.target.value)} />
+            <input className="form-control" type="email" placeholder="Enter Your Email" value={email} onChange={(e) => setemail(e.target.value)} />
+            <br />
             <button type="submit" className="btn btn-raised">Register</button>
 
         </form>

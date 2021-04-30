@@ -6,6 +6,8 @@ import { toast } from 'react-toastify';
 import { Button } from 'antd';
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 
 const Login = () => {
 
@@ -120,6 +122,7 @@ const Login = () => {
             <Button type="primary" icon={<MailOutlined />} size="large" disabled={!email || password.length < 6} onClick={handleSubmit} block>
                 Login with mail
             </Button>
+            <Link to="/forgot/password">forgot password</Link>
             <br />
 
         </form>
@@ -132,7 +135,7 @@ const Login = () => {
                     {loading ? (<h4 className="text-danger">  Loading...</h4>) : (<h4>Login</h4>)}
                     {loginForm()}
                     <Button type="danger" icon={<GoogleOutlined />} size="large" onClick={googleLogin} block>
-                        Login with mail
+                        Login with Google
             </Button>
                     <hr />
                     <Button type="primary" icon={<FacebookOutlined />} size="large" onClick={facebookLogin} block>
